@@ -2,8 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/CallHistoryButton">
+    android:layout_height="match_parent">
     <TextView
         android:text="Enter a Phoneword: "
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -30,4 +29,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/CallHistoryButton"
         android:enabled="false" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Contacts"
+        android:text="@string/contacts" />
 </LinearLayout>
