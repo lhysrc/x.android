@@ -22,6 +22,7 @@ namespace Phoneword
             var translateButton = FindViewById<Button>(Resource.Id.TranslateButton);
             var callButton = FindViewById<Button>(Resource.Id.CallButton);
             Button callHistoryButton = FindViewById<Button>(Resource.Id.CallHistoryButton);
+            Button contactsButton = FindViewById<Button>(Resource.Id.Contacts);
 
 
             // Disable the "Call" button
@@ -73,6 +74,12 @@ namespace Phoneword
             {
                 var intent = new Intent(this, typeof(CallHistoryActivity));
                 intent.PutStringArrayListExtra("phone_numbers", phoneNumbers);
+                StartActivity(intent);
+            };
+
+            contactsButton.Click += (sender, e) =>
+            {
+                var intent = new Intent(this, typeof(ContactItemActivity));
                 StartActivity(intent);
             };
         }
